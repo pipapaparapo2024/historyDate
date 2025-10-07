@@ -1,5 +1,5 @@
-import React, { type CSSProperties } from "react";
-
+import React from "react";
+import "./PageWrapper.css";
 interface PageProps {
   children: React.ReactNode;
   showBackButton?: boolean;
@@ -8,20 +8,6 @@ interface PageProps {
   styleHave?: boolean;
 }
 
-export const PageWrapper: React.FC<PageProps> = ({
-  children,
-  styleHave = true,
-}) => {
-  const containerStyle: CSSProperties = styleHave
-    ? {
-        backgroundColor: "green",
-        position: "relative",
-        margin: "0 160px 0 320px",
-        maxWidth: "1440px",
-        width: "100%",
-        boxSizing: "border-box",
-      }
-    : {};
-
-  return <div style={containerStyle}>{children}</div>;
+export const PageWrapper: React.FC<PageProps> = ({ children }) => {
+  return <div className="page-wrapper">{children}</div>;
 };

@@ -1,0 +1,41 @@
+
+.events-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  flex: 1;
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out; /* плавное свайп-перелистывание */
+}
+
+.slide-left {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.slide-right {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.event-card {
+  flex: 0 0 280px;
+  text-align: left;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.event-year {
+  font-weight: 700;
+  font-size: 18px;
+  color: #3877ee;
+  margin-bottom: 8px;
+}
+
+.event-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #42567a;
+  white-space: pre-line;
+}
+

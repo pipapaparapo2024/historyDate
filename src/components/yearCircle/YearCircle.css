@@ -1,0 +1,60 @@
+.year-circle-container {
+  position: relative;
+}
+
+.year-circle {
+  overflow: visible;
+}
+
+.circle-base {
+  fill: none;
+  stroke: #e2e8f0;
+  stroke-width: 1;
+}
+
+/* точки */
+.dot-circle {
+  fill: #42567a;
+  stroke: transparent;
+  transition: all 0.3s ease;
+}
+
+/* при наведении — увеличивается, становится белой с бордером */
+.circle-dot:hover .dot-circle {
+  fill: #fff;
+  stroke: #b0b0b0;
+  stroke-width: 1px;
+  r: 20;
+}
+
+/* активная точка (текущий период) */
+.dot-active {
+  fill: #fff;
+  stroke: #b0b0b0;
+  stroke-width: 1.5px;
+  r: 20 !important;
+}
+
+/* цифра */
+.dot-label {
+  font-size: 12px;
+  fill: #42567a;
+  font-family: "PT Sans", sans-serif;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* тема */
+.dot-theme {
+  font-size: 14px;
+  fill: #42567a;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: "PT Sans", sans-serif;
+  pointer-events: none;
+}
+
+/* плавное перемещение */
+.circle-dot {
+  transition: all 0.8s ease;
+}

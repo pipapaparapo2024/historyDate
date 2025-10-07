@@ -5,7 +5,7 @@ export const App: React.FC = () => {
   return (
     <>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </>
   );

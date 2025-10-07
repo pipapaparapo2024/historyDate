@@ -1,0 +1,30 @@
+.section-title {
+  display: flex;
+  gap: 78px;
+  font-family: "Inter", sans-serif;
+}
+
+.section-title__line {
+  width: 5px;
+  background: linear-gradient(180deg, #4a6cf7 0%, #f15bb5 100%);
+}
+
+.section-title__text {
+  font-size: 56px;
+  max-width: 350px;
+  font-weight: 700;
+  color: #3a4a6b;
+  line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+  .section-title__line {
+    background: none;
+  }
+  .section-title__text {
+    font-size: 20px;
+  }
+  .section-title {
+    gap: 0;
+  }
+}
