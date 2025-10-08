@@ -1,9 +1,10 @@
 .year-navigation {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap:40px;
 }
 
+/* кнопки */
 .nav-btn {
   width: 48px;
   height: 48px;
@@ -21,8 +22,59 @@
   background: rgba(66, 86, 122, 0.1);
   border-color: rgba(66, 86, 122, 0.6);
 }
-
+.block-button{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.counter {
+  font-size: 14px;
+  font-weight: 500;
+  color: #42567a;
+  letter-spacing: 0.05em;
+}
 .nav-btn:disabled {
   opacity: 0.3;
   cursor: default;
+}
+.nav-block{
+  display: flex;
+  gap: 10px;
+}
+/* точки пагинации */
+.dots {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c0c4d4;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  background: #42567a;
+  transform: scale(1.2);
+}
+
+/* мобильная адаптация */
+@media (max-width: 600px) {
+  .nav-btn {
+    width: 25px;
+    height: 25px;
+  }
+
+  .nav-btn svg {
+    width: 5px;
+    height: 7px;
+  }
+
+  .dots {
+    display: flex;
+  }
 }

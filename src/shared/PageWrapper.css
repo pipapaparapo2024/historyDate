@@ -1,7 +1,7 @@
 .page-wrapper {
   position: relative;
   box-sizing: border-box;
-  padding: 100px 0 60px 0;
+  padding: 100px 0px 60px 0px;
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
@@ -48,9 +48,9 @@
 }
 
 /* адаптивные отступы */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .page-wrapper {
-    padding: 60px 20px 0 20px;
+    padding-top: 60px;
     margin-left: 0;
     margin-right: 0;
     border: none;
@@ -61,3 +61,15 @@
     display: none;
   }
 }
+
+
+@media (max-width: 700px) {
+  .page-wrapper::before{
+    display: none;
+  }
+  .page-wrapper::after{
+    display: none;
+
+  }
+}
+

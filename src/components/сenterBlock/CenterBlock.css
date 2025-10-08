@@ -1,11 +1,19 @@
 .center-block {
-  position: relative;
   width: 100%;
   height: 600px;
   display: flex;
+  padding: 20px;
   align-items: center;
   justify-content: center;
   font-family: "PT Sans", sans-serif;
+}
+.years {
+  display: flex;
+  align-items: center;
+  padding-bottom: 130px;
+  justify-content: center;
+  gap: 100px;
+  z-index: 2;
 }
 
 /* Годы */
@@ -18,12 +26,10 @@
 
 .year--left {
   color: #4a6cf7;
-  margin-right: 50px;
 }
 
 .year--right {
   color: #f15bb5;
-  margin-left: 50px;
 }
 
 /* Центр круга */
@@ -39,7 +45,7 @@
 /* Навигация */
 .nav-wrapper {
   position: absolute;
-  bottom: 40px;
+  bottom: 180px;
   left: 80px;
   display: flex;
   flex-direction: column;
@@ -57,38 +63,41 @@
 
 @media (max-width: 1200px) {
   .year {
-    font-size: 140px;
-  }
-  .year--left {
-    margin-right: 60px;
-  }
-  .year--right {
-    margin-left: 60px;
+    font-size: 160px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .year {
-    font-size: 90px;
-  }
-  .nav-wrapper {
-    bottom: 20px;
-    left: 40px;
+    font-size: 120px;
   }
 }
-
-@media (max-width: 480px) {
+@media (max-width: 700px) {
+  .center-block{
+    height: 300px;
+  }
+  .year {
+    font-size: 100px;
+  }
+  .years {
+    padding-bottom: 60px;
+    gap: 30px;
+    border-bottom: 2px solid #C7CDD9;
+  }
+}
+@media (max-width: 600px) {
   .center-block {
     flex-direction: column;
     height: auto;
-    padding: 40px 0;
+    padding: 40px 0 20px 0;
   }
   .year {
     font-size: 56px;
     margin: 0;
   }
   .nav-wrapper {
-    bottom: 10px;
-    left: 10px;
+    bottom: 20px;
+    left: 20px;
   }
+  
 }

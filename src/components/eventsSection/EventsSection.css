@@ -1,35 +1,45 @@
+/* === ОСНОВНОЙ КОНТЕЙНЕР === */
+.events-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 80px;
+}
 
+/* === ОКНО ПРОСМОТРА === */
+.events-window {
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: 1;
+  cursor: grab;
+  margin: 0 20px;
+  -webkit-overflow-scrolling: touch; /* инерция на iOS */
+}
+
+.events-window::-webkit-scrollbar {
+  display: none;
+}
+
+/* === РЯД СОБЫТИЙ === */
 .events-row {
   display: flex;
-  align-items: flex-start;
   gap: 60px;
-  flex: 1;
-  overflow: hidden;
-  transition: transform 0.4s ease-in-out; /* плавное свайп-перелистывание */
 }
 
-.slide-left {
-  transform: translateX(100px);
-  opacity: 0;
-}
-
-.slide-right {
-  transform: translateX(-100px);
-  opacity: 0;
-}
-
+/* === КАРТОЧКИ СОБЫТИЙ === */
 .event-card {
-  flex: 0 0 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  gap: 15px;
+  transition: transform 0.3s ease;
 }
 
 .event-year {
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 20px;
   color: #3877ee;
-  margin-bottom: 8px;
 }
 
 .event-text {
@@ -39,3 +49,56 @@
   white-space: pre-line;
 }
 
+/* === СТРЕЛКИ === */
+.scroll-btn {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: opacity 0.3s, background 0.3s;
+  z-index: 5;
+}
+
+.scroll-btn:hover {
+  background: #f2f4f7;
+}
+
+/* === АДАПТИВ: МОБИЛЬНЫЕ (≤700px) === */
+@media (max-width: 700px) {
+  .events-section {
+    margin: 0;
+  }
+
+  .scroll-btn {
+    display: none;
+  }
+
+  .event-card {
+    max-width: 170px;
+  }
+
+  .events-row {
+    gap: 25px;
+  }
+
+  .events-window {
+    margin: 0;
+    padding-left: 0; /* по умолчанию отступа слева нет */
+    padding-right: 0; /* справа нет никогда */
+    box-sizing: border-box;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    transition: padding-left 0.18s ease;
+  }
+
+  /* класс, добавляемый только когда scrollLeft ≈ 0 */
+  .events-window.start-gap {
+    padding-left: 20px;
+  }
+}

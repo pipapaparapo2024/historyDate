@@ -22,9 +22,11 @@
     background: none;
   }
   .section-title__text {
+    max-width: 120px;
     font-size: 20px;
   }
   .section-title {
+    padding: 0 20px;
     gap: 0;
   }
 }
