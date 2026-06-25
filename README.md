@@ -15,22 +15,19 @@
 
 ## 📦 Установка и запуск
 
-### 1️⃣ Клонирование репозитория
+### 1️⃣ Клонирование и запуск
+
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-
+git clone https://github.com/pipapaparapo2024/historyDate.git
+cd historyDate
 npm install
-# или
-yarn install
-
 npm run dev
-# или
-yarn dev
+```
 
-После запуска открой http://localhost:5173
-в браузере, чтобы увидеть приложение.
+После запуска открой http://localhost:5173 в браузере.
 
+**Демо на GitHub Pages:** https://pipapaparapo2024.github.io/historyDate/
 
+После пуша в `main` workflow `.github/workflows/static.yml` собирает `dist/` и публикует сайт.
 
-
+**Один раз в настройках:** Settings → Pages → Source → **GitHub Actions**.
